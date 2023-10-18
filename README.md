@@ -1,6 +1,6 @@
 # bsc23convention
 
-BScDevOps Assign - Team 
+BScDevOps Assign - Conor Dolan, Shane McGuire, John Devaney, Enda Doran, Aaron Darcy, Zach Gorman, Ibraim Abduramanov and Ankush Ikhar 
 
 # Table of Contents
 Preamble
@@ -27,11 +27,11 @@ This is the online repository for the DevOps Assignment.
 Our product will be delivered using an Agile methodology that embraces the DevOps culture. Please note that our culture embraces change and these documents are treated as living, breathing artefacts that will be continuously updated.
 
 # Scrum Master
-- Week 4 Scrum Master Shane McGuire
-
+- Week 4 Scrum Master Shane McGuire L00161625
+- Week 5 Scrum Master Conor Dolan L00141197
 
 # Product Owner
-<name> <number> (Permanent)
+Shane McGuire L00161625 (Permanent)
 
 # Project Deadline
 Refer to BB for deadlines
