@@ -29,5 +29,5 @@ jobs:
       - name: Deploy to GitHub Pages
         run: |
           npm install -g gh-pages
-          gh-pages -d build -b gh-pages -m "Deploy to GitHub Pages"
+          gh-pages -d ./convention_center_booking_system -b gh-pages -m "Deploy to GitHub Pages"
         working-directory: ./convention_center_booking_system
