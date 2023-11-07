@@ -1,0 +1,26 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Lint with ESLint
+        run: npx eslint . --ext .js,.jsx,.ts,.tsx
+
+      - name: Build
+        run: npm run build
+
+      # Additional steps for deployment or further testing can be added here.
