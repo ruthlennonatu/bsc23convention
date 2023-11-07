@@ -27,6 +27,6 @@ jobs:
         run: npm run build  # Adjust this command to build your React app
         working-directory: ./convention_center_booking_system
 
-      - name: Deploy code to Server env:
+      - name: Deploy code to Server env
         run: npm run preview
-         working-directory: ./convention_center_booking_system
+        working-directory: ./convention_center_booking_system
