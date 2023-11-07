@@ -32,3 +32,8 @@ jobs:
         with:
           personal_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build  # Adjust the publish directory if necessary
+
+      - name: Deploy code to Server env:
+          SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      run: |
+        echo $SSH_KEY | base64 -d > ssh-key chmod 400 ssh-key ssh -i ssh-key -o StrictHostKeyChecking=no ubuntu@3.145.1.14 "cd /home/ubuntu/sample-app-deployment-with-github-actions && GIT_SSH_COMMAND='ssh -i /home/ubuntu/.ssh/ssh-key' git pull origin main"
