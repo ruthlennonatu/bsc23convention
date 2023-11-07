@@ -3,7 +3,7 @@ name: convention_center_booking_system
 on:
   push:
     branches:
-      - Development  # Adjust this branch name to your main development branch
+      - main  # Adjust this branch name to your main development branch
 
 jobs:
   build:
