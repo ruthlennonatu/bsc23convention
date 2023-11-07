@@ -3,7 +3,7 @@ name: convention_center_booking_system
 on:
   push:
     branches:
-      - development  # Adjust this branch name to your main development branch
+      - main  # Adjust this branch name to your main development branch
 
 jobs:
   build:
@@ -20,9 +20,12 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: ./convention_center_booking_system
+
 
       - name: Build React app
         run: npm run build  # Adjust this command to build your React app
+        working-directory: ./convention_center_booking_system
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
