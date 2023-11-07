@@ -28,7 +28,5 @@ jobs:
         working-directory: ./convention_center_booking_system
 
       - name: Deploy code to Server env:
-        SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        run: |
-        echo $SSH_KEY | base64 -d > ssh-key chmod 400 ssh-key ssh -i ssh-key -o StrictHostKeyChecking=no ubuntu@3.145.1.14 "cd /home/ubuntu/sample-app-deployment-with-github-actions && GIT_SSH_COMMAND='ssh -i /home/ubuntu/.ssh/ssh-key' git pull origin main"
-        working-directory: ./convention_center_booking_system
+        run: npm run preview
+         working-directory: ./convention_center_booking_system
