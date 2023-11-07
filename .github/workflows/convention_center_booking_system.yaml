@@ -3,7 +3,7 @@ name: convention_center_booking_system
 on:
   push:
     branches:
-      - main  # Adjust this branch name to your main development branch
+      - main
 
 jobs:
   build:
@@ -16,17 +16,23 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 14  # Adjust the Node.js version if necessary
+          node-version: 14
 
       - name: Install dependencies
         run: npm install
         working-directory: ./convention_center_booking_system
 
-
       - name: Build React app
-        run: npm run build  # Adjust this command to build your React app
+        run: npm run build
         working-directory: ./convention_center_booking_system
 
-      - name: Deploy code to Server env
-        run: npm run preview
+      - name: Deploy to GitHub Pages
+        run: |
+          echo 'npm run preview'
+        working-directory: ./convention_center_booking_system
+
+      - name: Deploy to GitHub Pages
+        run: |
+          npm install -g gh-pages
+          npm run deploy
         working-directory: ./convention_center_booking_system
