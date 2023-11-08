@@ -26,6 +26,10 @@ jobs:
         run: npm install
         working-directory: ./convention_center_booking_system
 
+      - name: Lint with ESLint
+        run: npx eslint . --ext .js,.jsx,.ts,.tsx
+        working-directory: ./convention_center_booking_system
+
       - name: Build and test
         run: npm run build
         working-directory: ./convention_center_booking_system
