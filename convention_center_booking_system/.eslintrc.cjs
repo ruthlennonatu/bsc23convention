@@ -19,16 +19,17 @@ module.exports = {
   },
   settings: {
     react: {
-      version: 'detect', 
+      version: 'detect',
     },
   },
   rules: {
-    'react/react-in-jsx-scope': 'off', 
-    'react/jsx-uses-react': 'off', 
-    'react/jsx-uses-vars': 'error', 
+    'react/react-in-jsx-scope': 'off',
+    'react/jsx-uses-react': 'off',
+    'react/jsx-uses-vars': 'error',
   },
   plugins: [
     '@typescript-eslint',
     'react',
+    'react-hooks'
   ],
 };
