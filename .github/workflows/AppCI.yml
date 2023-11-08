@@ -24,6 +24,8 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: ./convention_center_booking_system
 
       - name: Build and test
         run: npm run build
+        working-directory: ./convention_center_booking_system
