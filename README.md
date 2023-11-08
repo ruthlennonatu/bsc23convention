@@ -29,6 +29,7 @@ Our product will be delivered using an Agile methodology that embraces the DevOp
 # Scrum Master
 - Week 4 Scrum Master Shane McGuire L00161625
 - Week 5 Scrum Master Conor Dolan L00141197
+- Week 7 Scrum Master Enda Doran L00165578
 
 # Product Owner
 Shane McGuire L00161625 (Permanent)
