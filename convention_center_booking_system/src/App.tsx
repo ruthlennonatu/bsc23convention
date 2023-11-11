@@ -1,12 +1,15 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
-import Registration from './components/Registration'
+import RegisterComponent from './components/registration'
 
 function App() {
 
   return (
-    <Registration/>
+    <>
+      <RegisterComponent />
+    </>
+
   )
 }
 
