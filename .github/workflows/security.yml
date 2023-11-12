@@ -1,0 +1,34 @@
+name: Security Testing
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  security_scan:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup Java
+      uses: actions/setup-java@v2
+      with:
+        distribution: 'adopt'
+        java-version: '11'
+
+    - name: Build with Maven
+      run: mvn clean install
+
+    - name: Run OWASP ZAP security scan
+      uses: docker://owasp/zap2docker-stable
+      with:
+        args: -t http://localhost:8080 -r zap_report.html
+
+    - name: Upload ZAP Report
+      uses: actions/upload-artifact@v2
+      with:
+        name: zap-report
+        path: zap_report.html
