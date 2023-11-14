@@ -5,8 +5,17 @@ import RegisterComponent from "./components/Registration";
 import LoginComponent from './components/Login';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Nav/Navbar";
+import BookingsDisplay from "./components/BookingsDisplay";
 
 function App() {
+
+  const workshopData = {
+    id: 1,
+    workshop: 'Example Workshop',
+    venue: 'Example Venue',
+    date: '2023-11-14',
+  };
+
   return (
     <>
       <Router>
@@ -16,6 +25,7 @@ function App() {
             <Route path="/" element={<LoginComponent />} />
             <Route path="/register" element={<RegisterComponent />} />
           </Routes>
+          <BookingsDisplay bookings={[workshopData]}/>
         </div>
       </Router>
 
