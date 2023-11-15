@@ -15,6 +15,10 @@
         {
             "label": "Register",
             "href": "/register"
+        },
+        {
+            "label": "Customer Page",
+            "href": "/customerpage"
         }
     ]
 }

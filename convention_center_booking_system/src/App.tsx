@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Nav/Navbar";
 import BookingsDisplay from "./components/BookingsDisplay";
 import Footer from './components/Footer';
+import CustomerPage from "./components/CustomerPage";
 
 function App() {
 
@@ -23,19 +24,20 @@ function App() {
   return (
     <>
       <Router>
-        <div>
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<LoginComponent />} />
-            <Route path="/register" element={<RegisterComponent />} />
-            <Route path="/bookings" element={<BookingsDisplay bookings={[workshopData]} />} />
-          </Routes>
-          {/* <BookingsDisplay bookings={[workshopData]} /> */}
-          <Footer companyName="Convention Center" year={currentYear} />
-        </div>
-      </Router>
-
-    </>
+          <div>
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<LoginComponent />} />
+              <Route path="/Login" element={<LoginComponent />} />
+              <Route path="/register" element={<RegisterComponent />} />
+              <Route path="/bookings" element={<BookingsDisplay bookings={[workshopData]} />} />
+              <Route path="/customerpage" element={<CustomerPage />}/>
+            </Routes>
+            {/* <BookingsDisplay bookings={[workshopData]} /> */}
+            <Footer companyName="Convention Center" year={currentYear} />
+          </div>
+        </Router>
+      </>
   );
 }
 
