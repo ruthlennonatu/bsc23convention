@@ -24,8 +24,9 @@ function App() {
           <Routes>
             <Route path="/" element={<LoginComponent />} />
             <Route path="/register" element={<RegisterComponent />} />
+            <Route path="/bookings" element={<BookingsDisplay bookings={[workshopData]} />} />
           </Routes>
-          <BookingsDisplay bookings={[workshopData]}/>
+          {/* <BookingsDisplay bookings={[workshopData]} /> */}
         </div>
       </Router>
 

@@ -25,9 +25,9 @@ const BookingsDisplay: React.FC<Props> = ({ bookings }) => {
   };
 
   return (
-    <div>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
       <h2>Your Bookings</h2>
-      <table>
+      <table style={{ border: '2px solid black', borderRadius: '15px', borderCollapse: 'separate', padding: '10px' }}>
         <thead>
           <tr>
             <th>Workshop</th>
@@ -39,9 +39,9 @@ const BookingsDisplay: React.FC<Props> = ({ bookings }) => {
         <tbody>
           {bookings.map((booking) => (
             <tr key={booking.id}>
-              <td style={{ width: '80px' }}>{editingBookingId === booking.id ? <input type="text" defaultValue={booking.workshop} /> : booking.workshop}</td>
-              <td style={{ width: '80px' }}>{editingBookingId === booking.id ? <input type="text" defaultValue={booking.venue} /> : booking.venue}</td>
-              <td style={{ width: '80px' }}>{editingBookingId === booking.id ? <input type="text" defaultValue={booking.date} /> : booking.date}</td>
+              <td style={{ width: '180px' }}>{editingBookingId === booking.id ? <input type="text" defaultValue={booking.workshop} /> : booking.workshop}</td>
+              <td style={{ width: '180px' }}>{editingBookingId === booking.id ? <input type="text" defaultValue={booking.venue} /> : booking.venue}</td>
+              <td style={{ width: '180px' }}>{editingBookingId === booking.id ? <input type="text" defaultValue={booking.date} /> : booking.date}</td>
               <td>
                 {editingBookingId === booking.id ? (
                   <button onClick={handleSaveClick}>Save</button>
