@@ -49,11 +49,8 @@ const RegisterComponent: React.FC = () => {
       {
         <form>
           <h3>Register</h3>
-
+          <h5 id="help" style={{ color: "red" }}></h5>
           <table style={{ margin: "auto" }}>
-            <tr>
-              <td id="help" style={{ color: "red" }}></td>
-            </tr>
             <tr>
               <td>
                 <label>Email address: </label>
