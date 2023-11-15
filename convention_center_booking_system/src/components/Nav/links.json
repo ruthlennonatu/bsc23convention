@@ -1,0 +1,20 @@
+{
+    "links": [
+        {
+            "label": "Home",
+            "href": "/home"
+        },
+        {
+            "label": "Bookings",
+            "href": "/bookings"
+        },
+        {
+            "label": "About",
+            "href": "/about"
+        },
+        {
+            "label": "Register",
+            "href": "/register"
+        }
+    ]
+}
