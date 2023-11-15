@@ -6,6 +6,7 @@ import LoginComponent from './components/Login';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Nav/Navbar";
 import BookingsDisplay from "./components/BookingsDisplay";
+import Footer from './components/Footer';
 
 function App() {
 
@@ -15,6 +16,9 @@ function App() {
     venue: 'Example Venue',
     date: '2023-11-14',
   };
+
+
+  const currentYear = new Date().getFullYear();
 
   return (
     <>
@@ -27,6 +31,7 @@ function App() {
             <Route path="/bookings" element={<BookingsDisplay bookings={[workshopData]} />} />
           </Routes>
           {/* <BookingsDisplay bookings={[workshopData]} /> */}
+          <Footer companyName="Your Company" year={currentYear} />
         </div>
       </Router>
 

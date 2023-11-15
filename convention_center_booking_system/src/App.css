@@ -76,3 +76,19 @@
   text-decoration: none;
   color: rgba(14, 34, 14, 0.8);
 }
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(12, 12, 12);
+}
+
+.footer-line {
+  border: 1px solid #0e0d0d;
+}
+
+.footer-content {
+  padding: 10px;
+  text-align: center;
+}
