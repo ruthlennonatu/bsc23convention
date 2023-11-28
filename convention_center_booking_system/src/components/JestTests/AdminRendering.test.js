@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import AdminDashboard from '../AdminDashboard'; // Adjust the import path as necessary
+import AdminDashboard from '../AdminDashboard'; 
 
 describe('AdminDashboard', () => {
   it('renders the dashboard and buttons', () => {
