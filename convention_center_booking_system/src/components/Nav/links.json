@@ -9,8 +9,8 @@
             "href": "/bookings"
         },
         {
-            "label": "About",
-            "href": "/about"
+            "label": "Admin",
+            "href": "/admin"
         },
         {
             "label": "LogIn",
