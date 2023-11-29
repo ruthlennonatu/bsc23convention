@@ -25,6 +25,7 @@ const BookingsDisplay: React.FC<Props> = ({ bookings }) => {
   };
 
   return (
+    
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
       <h2>Your Bookings</h2>
       <table style={{ border: '2px solid black', borderRadius: '15px', borderCollapse: 'separate', padding: '10px' }}>

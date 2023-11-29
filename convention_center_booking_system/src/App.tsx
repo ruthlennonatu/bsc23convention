@@ -8,8 +8,12 @@ import Navbar from "./components/Nav/Navbar";
 import BookingsDisplay from "./components/BookingsDisplay";
 import Footer from './components/Footer';
 
+import AddCustomer from "./components/AddCustomer";
+import DisplayCustomers from "./components/DisplayCustomers";
+
 function App() {
 
+  
   const workshopData = {
     id: 1,
     workshop: 'Example Workshop',
@@ -32,6 +36,10 @@ function App() {
           </Routes>
           {/* <BookingsDisplay bookings={[workshopData]} /> */}
           <Footer companyName="Convention Center" year={currentYear} />
+          <div>
+          <AddCustomer />
+          <DisplayCustomers />
+        </div>
         </div>
       </Router>
 
