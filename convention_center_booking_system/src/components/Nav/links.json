@@ -9,12 +9,20 @@
             "href": "/bookings"
         },
         {
-            "label": "About",
-            "href": "/about"
+            "label": "Admin",
+            "href": "/admin"
+        },
+        {
+            "label": "LogIn",
+            "href": "/"
         },
         {
             "label": "Register",
             "href": "/register"
+        },
+        {
+            "label": "Customer Page",
+            "href": "/customerpage"
         }
     ]
 }

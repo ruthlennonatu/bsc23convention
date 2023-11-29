@@ -27,7 +27,7 @@ const Links: React.FC<{ links: Link[] }> = ({ links }) => {
   );
 };
 
-const Navbar: React.FC<{}> = () => {
+const Navbar: React.FC<Record<string, never>> = () => {
   return (
     <nav className="navbar">
       <div className="logo-container">

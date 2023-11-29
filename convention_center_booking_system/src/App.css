@@ -49,6 +49,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
 }
 
 .logo-container {
@@ -70,6 +71,7 @@
 .link a {
   text-decoration: none;
   color: rgb(14, 34, 14);
+  margin-right: 10px;
 }
 
 .link a:hover {
@@ -91,4 +93,20 @@
 .footer-content {
   padding: 10px;
   text-align: center;
+}
+
+.dashboard-container {
+  text-align: center; /* Center the text */
+  margin-top: 20px; /* Add margin for spacing */
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row; /* Align buttons horizontally */
+  justify-content: center; /* Center items horizontally */
+  margin-top: 20px; /* Add margin for spacing */
+}
+
+.button-container button {
+  margin: 0 10px; /* Add margin between buttons */
 }
