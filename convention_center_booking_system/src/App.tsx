@@ -1,26 +1,28 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import "./App.css";
 import RegisterComponent from "./components/Registration";
-import LoginComponent from './components/Login';
+import LoginComponent from "./components/Login";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Nav/Navbar";
 import BookingsDisplay from "./components/BookingsDisplay";
-import Footer from './components/Footer';
+import Footer from "./components/Footer";
+import CustomerPage from "./components/CustomerPage";
+import AdminDashboard from "./components/AdminDashboard";
 
 import AddCustomer from "./components/AddCustomer";
 import DisplayCustomers from "./components/DisplayCustomers";
 
 function App() {
+<<<<<<< HEAD
 
   
+=======
+>>>>>>> 16d6ed86093327679297f82812879c6b43a6fa96
   const workshopData = {
     id: 1,
-    workshop: 'Example Workshop',
-    venue: 'Example Venue',
-    date: '2023-11-14',
+    workshop: "Example Workshop",
+    venue: "Example Venue",
+    date: "2023-11-14",
   };
-
 
   const currentYear = new Date().getFullYear();
 
@@ -31,8 +33,14 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<LoginComponent />} />
+            <Route path="/admin" element={<AdminDashboard />} />
+            <Route path="/Login" element={<LoginComponent />} />
             <Route path="/register" element={<RegisterComponent />} />
-            <Route path="/bookings" element={<BookingsDisplay bookings={[workshopData]} />} />
+            <Route
+              path="/bookings"
+              element={<BookingsDisplay bookings={[workshopData]} />}
+            />
+            <Route path="/customerpage" element={<CustomerPage />} />
           </Routes>
           {/* <BookingsDisplay bookings={[workshopData]} /> */}
           <Footer companyName="Convention Center" year={currentYear} />
@@ -42,10 +50,8 @@ function App() {
         </div>
         </div>
       </Router>
-
     </>
   );
 }
 
 export default App;
-

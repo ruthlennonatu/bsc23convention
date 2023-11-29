@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 
 const RegisterComponent: React.FC = () => {
-  const [registerChecker, setRegisterChecker] = useState<boolean>(false);
+  const [, setRegisterChecker] = useState<boolean>(false);
   const emailRegex: RegExp = /^\S+@\S+\.\S+$/;
-  const passwordRegex: RegExp =
-    /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
 
   const validate = (value: string, regex: RegExp): boolean => {
     return regex.test(value);
@@ -31,7 +29,7 @@ const RegisterComponent: React.FC = () => {
 
   useEffect(() => {
     const registerButton = document.getElementById("regSubmit");
-    const emailInput = document.getElementById("regEmail");
+    // const emailInput = document.getElementById("regEmail");   // Not used yet
 
     if (registerButton) {
       registerButton.addEventListener("click", handleRegisterClick);

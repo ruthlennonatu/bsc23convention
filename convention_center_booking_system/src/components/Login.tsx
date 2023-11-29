@@ -59,7 +59,7 @@ const LoginComponent: React.FC = () => {
                     </button>
                     <br />
                     <button type="button" className="btn btn-link" onClick={handleRegisterRedirect}>
-                        Don't have an account? Register
+                        {"Don't have an account? Register"}
                     </button>
                 </div>
             </form>
