@@ -8,15 +8,7 @@ import Footer from "./components/Footer";
 import CustomerPage from "./components/CustomerPage";
 import AdminDashboard from "./components/AdminDashboard";
 
-import AddCustomer from "./components/AddCustomer";
-import DisplayCustomers from "./components/DisplayCustomers";
-
 function App() {
-<<<<<<< HEAD
-
-  
-=======
->>>>>>> 16d6ed86093327679297f82812879c6b43a6fa96
   const workshopData = {
     id: 1,
     workshop: "Example Workshop",
@@ -44,10 +36,6 @@ function App() {
           </Routes>
           {/* <BookingsDisplay bookings={[workshopData]} /> */}
           <Footer companyName="Convention Center" year={currentYear} />
-          <div>
-          <AddCustomer />
-          <DisplayCustomers />
-        </div>
         </div>
       </Router>
     </>
