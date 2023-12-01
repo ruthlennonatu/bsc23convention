@@ -20,9 +20,11 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: ./convention_center_booking_system
 
       - name: Build the React app
         run: npm run build
+        working-directory: ./convention_center_booking_system
 
       - name: Run JMeter Load Test
         run: |
