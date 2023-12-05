@@ -1,49 +1,70 @@
-test('Sample Login test', () => {
-  const value = true;
-  console.log(value); // This will print 'true'
-  expect(value).toBe(true); // This assertion will pass
-});
+// Import necessary libraries and components
+import React from 'react';
+import { render, fireEvent, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import LoginComponent from '../Login';
 
-// UNIT TEST CODE - NEEDS TO BE FIXED
-/*
-    import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
-import { LoginComponent } from '../Login';
+// Mock useNavigate
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useNavigate: () => jest.fn(),
+}));
 
 describe('LoginComponent', () => {
-  it('handles email and password input changes', () => {
-    const { getByPlaceholderText } = render(<LoginComponent />);
-
-    const emailInput = getByPlaceholderText('Enter email') as HTMLInputElement;
-    const passwordInput = getByPlaceholderText('Enter password') as HTMLInputElement;
-
-    fireEvent.change(emailInput, { target: { value: 'test@example.com' } });
-    fireEvent.change(passwordInput, { target: { value: 'testpassword' } });
-
-    expect(emailInput.value).toBe('test@example.com');
-    expect(passwordInput.value).toBe('testpassword');
+  it('renders correctly', () => {
+    render(
+      <Router>
+        <LoginComponent />
+      </Router>
+    );
+    expect(screen.getByPlaceholderText('Enter email')).toBeInTheDocument();
+    expect(screen.getByPlaceholderText('Enter password')).toBeInTheDocument();
+    //expect(screen.getByText("Login")).toBeInTheDocument();
+    expect(screen.getByText("Don't have an account? Register")).toBeInTheDocument();
   });
 
-  it('calls handleLoginClick when login button is clicked', () => {
-    const handleLoginClick = jest.fn();
-    const { getByText } = render(<LoginComponent handleLoginClick={handleLoginClick} />);
+  it('updates email and password fields on user input', () => {
+    render(
+      <Router>
+        <LoginComponent />
+      </Router>
+    );
 
-    const loginButton = getByText('Login');
+    const emailInput = screen.getByPlaceholderText('Enter email');
+    fireEvent.change(emailInput, { target: { value: 'test@example.com' } });
+    expect(emailInput.value).toBe('test@example.com');
+
+    const passwordInput = screen.getByPlaceholderText('Enter password');
+    fireEvent.change(passwordInput, { target: { value: 'password123' } });
+    expect(passwordInput.value).toBe('password123');
+  });
+
+  it('handles login button click', () => {
+    const consoleSpy = jest.spyOn(console, 'log');
+    render(
+      <Router>
+        <LoginComponent />
+      </Router>
+    );
+
+    const loginButton = screen.getByRole('button', { name: 'Login' });
     fireEvent.click(loginButton);
 
-    expect(handleLoginClick).toHaveBeenCalled();
+    expect(consoleSpy).toHaveBeenCalledWith('Login button clicked');
   });
 
-  it('calls handleRegisterRedirect when register link is clicked', () => {
-    const handleRegisterRedirect = jest.fn();
-    const { getByText } = render(<LoginComponent handleRegisterRedirect={handleRegisterRedirect} />);
+  it('handles register redirect button click', () => {
+    const consoleSpy = jest.spyOn(console, 'log');
+    render(
+      <Router>
+        <LoginComponent />
+      </Router>
+    );
 
-    const registerLink = getByText("Don't have an account? Register");
-    fireEvent.click(registerLink);
+    const registerButton = screen.getByText("Don't have an account? Register");
+    fireEvent.click(registerButton);
 
-    expect(handleRegisterRedirect).toHaveBeenCalled();
+    expect(consoleSpy).toHaveBeenCalledWith('Redirect to register');
   });
 });
-
-
-*/
