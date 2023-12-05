@@ -1,4 +1,3 @@
-
 name: "SOOS DAST Scan"
 
 on:
@@ -15,6 +14,20 @@ jobs:
     name: SOOS DAST Scan
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run ESLint
+        run: npx eslint . --ext .js,.jsx
+      
       - name: Run SOOS DAST Scan
         uses: soos-io/soos-dast-github-action@3e71b27756f4ed77d7ad3c0ad92afddb47a40e4d # Use latest version from https://github.com/marketplace/actions/soos-dast
         with:
@@ -24,6 +37,7 @@ jobs:
           scan_mode: "baseline"
           target_url: "https://www.example.com/"
           output_format: "sarif"
+      
       - name: Upload SOOS DAST SARIF Report
         uses: github/codeql-action/upload-sarif@v2
         with:
