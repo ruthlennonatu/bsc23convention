@@ -2,7 +2,7 @@ const clearCache = async () => {
     try {
         console.log('Clearing cache...');
 
-        //Will need to use a tool here to use cache, i heard redis is good
+        //Will need to use a tool here to use cache, i heard redis is good test
 
         console.log('Cache cleared successfully.');
     } catch (error) {
