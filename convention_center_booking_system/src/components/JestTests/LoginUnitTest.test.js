@@ -72,6 +72,5 @@ describe('LoginComponent', () => {
 
     expect(consoleSpy).toHaveBeenCalledWith('Redirect to register');
   });
-  */
 });
   
