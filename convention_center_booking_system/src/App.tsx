@@ -22,7 +22,7 @@ function App() {
     <>
       <Router>
         <div>
-          <Navbar />
+          <Navbar /> 
           <Routes>
             <Route path="/" element={<LoginComponent />} />
             <Route path="/admin" element={<AdminDashboard />} />
