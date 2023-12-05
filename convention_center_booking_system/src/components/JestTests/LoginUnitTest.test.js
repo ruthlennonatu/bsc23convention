@@ -11,9 +11,6 @@ jest.mock('react-router-dom', () => ({
   useNavigate: () => jest.fn(),
 }));
 
-import React from 'react';
-import { render, fireEvent, screen } from '@testing-library/react';
-import LoginComponent  from '../Login';
 
 describe('LoginComponent', () => {
   it('renders correctly', () => {
