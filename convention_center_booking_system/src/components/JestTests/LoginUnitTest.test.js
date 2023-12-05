@@ -1,16 +1,34 @@
+/*
 test('Sample Login test', () => {
   const value = true;
   console.log(value); // This will print 'true'
   expect(value).toBe(true); // This assertion will pass
 });
+*/
 
 // UNIT TEST CODE - NEEDS TO BE FIXED
-/*
-    import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
-import { LoginComponent } from '../Login';
+
+import React from 'react';
+import { render, fireEvent, screen } from '@testing-library/react';
+import LoginComponent  from '../Login';
 
 describe('LoginComponent', () => {
+  
+  it('renders login form elements', () => {
+    render(<LoginComponent />);
+
+    const emailInput = screen.getByPlaceholderText('Enter email');
+    const passwordInput = screen.getByPlaceholderText('Enter password');
+    const loginButton = screen.getByText('Login');
+    const registerLink = screen.getByText("Don't have an account? Register");
+
+    expect(emailInput).toBeInTheDocument();
+    expect(passwordInput).toBeInTheDocument();
+    expect(loginButton).toBeInTheDocument();
+    expect(registerLink).toBeInTheDocument();
+  });
+
+  /*
   it('handles email and password input changes', () => {
     const { getByPlaceholderText } = render(<LoginComponent />);
 
@@ -23,7 +41,9 @@ describe('LoginComponent', () => {
     expect(emailInput.value).toBe('test@example.com');
     expect(passwordInput.value).toBe('testpassword');
   });
+  
 
+  
   it('calls handleLoginClick when login button is clicked', () => {
     const handleLoginClick = jest.fn();
     const { getByText } = render(<LoginComponent handleLoginClick={handleLoginClick} />);
@@ -43,7 +63,7 @@ describe('LoginComponent', () => {
 
     expect(handleRegisterRedirect).toHaveBeenCalled();
   });
+  */
 });
+  
 
-
-*/
