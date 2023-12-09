@@ -3,24 +3,20 @@ import mysql from 'mysql2';
 import 'dotenv/config';
 
 var app = express();
-// set up rate limiter: maximum of five requests per minute
-var RateLimit = require('express-rate-limit');
-var limiter = RateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, // max 100 requests per windowMs
-});
 
-// apply rate limiter to all requests
-app.use(limiter);
+
 
 
 app.use(express.json()); // For parsing application/json
 
 
+console.log(process.env.DB_HOST);
+console.log("here");
+
 
 // Set up MySQL connection
 var con = mysql.createConnection({
-  host: env.DB_HOST,
+  host: process.env.DB_HOST,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_DATABASE
