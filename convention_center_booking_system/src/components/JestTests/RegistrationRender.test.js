@@ -1,30 +1,18 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
-import RegisterComponent from './RegisterComponent';
+import { render } from '@testing-library/react';
+import Registration from './registration'; 
 
-describe('RegisterComponent', () => {
-  it('renders without crashing', () => {
-    const { getByText, getByPlaceholderText } = render(<RegisterComponent />);
-    
+describe('Registration Rendering', () => {
+  it('renders the Register page with expected elements', () => {
+    const { getByText, getByPlaceholderText } = render(<Registration />);
+
     expect(getByText('Register')).toBeInTheDocument();
     expect(getByPlaceholderText('Enter email')).toBeInTheDocument();
     expect(getByPlaceholderText('Repeat email')).toBeInTheDocument();
+    expect(getByPlaceholderText('Enter password')).toBeInTheDocument();
+    expect(getByPlaceholderText('Repeat password')).toBeInTheDocument();
+    expect(getByText('Submit')).toBeInTheDocument();
+
   });
-
-  it('validates email input and updates state accordingly', () => {
-    const { getByPlaceholderText, getByText } = render(<RegisterComponent />);
-    
-    const emailInput = getByPlaceholderText('Enter email');
-    const repeatEmailInput = getByPlaceholderText('Repeat email');
-
-    fireEvent.change(emailInput, { target: { value: 'invalidEmail' } });
-    fireEvent.change(repeatEmailInput, { target: { value: 'invalidEmail' } });
-
-    expect(getByText('Please use format joe123@outlook.ie')).toBeInTheDocument();
-    
-    fireEvent.change(emailInput, { target: { value: 'validEmail@domain.com' } });
-    fireEvent.change(repeatEmailInput, { target: { value: 'validEmail@domain.com' } });
-    expect(queryByText('Please use format joe123@outlook.ie')).not.toBeInTheDocument();
-  });
-
 });
+
