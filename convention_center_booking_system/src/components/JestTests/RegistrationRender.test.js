@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import Registration from './registration'; 
+import Registration from '../registration'; 
 
 describe('Registration Rendering', () => {
   it('renders the Register page with expected elements', () => {
