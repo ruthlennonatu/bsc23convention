@@ -18,15 +18,18 @@ jobs:
       with:
         node-version: '14'
 
-    - name: Install dependencies
-      run: npm install
+    - name: Install NodeJsScan
+      run: |
+        git clone https://github.com/nodejsscan/nodejsscan.git
+        cd nodejsscan
+        npm install
+        npm link
 
     - name: Run NodeJsScan security scan
-      run: npx nodejsscan
+      run: nodejsscan
 
     - name: Upload scan results
       uses: actions/upload-artifact@v2
       with:
         name: security-scan-results
         path: nodejsscan_results.json
-
