@@ -38,7 +38,7 @@ function App() {
             <Route path="/diplayCustomers" element={<DisplayCustomers />} />
           </Routes>
           {/* <BookingsDisplay bookings={[workshopData]} /> */}
-          <Footer companyName="Convention Center" year={currentYear} />
+          <Footer companyName="Convention Center" year={currentYear} /> 
         </div>
       </Router>
     </>
