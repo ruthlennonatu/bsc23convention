@@ -1,6 +1,6 @@
-import React from 'react';
 import { render } from '@testing-library/react';
-import Registration from '../registration'; 
+import React from 'react';
+import Registration from '../Registration'; 
 
 describe('Registration Rendering', () => {
   it('renders the Register page with expected elements', () => {
@@ -14,4 +14,3 @@ describe('Registration Rendering', () => {
     expect(getByText('Submit')).toBeInTheDocument();
 
   });
-});

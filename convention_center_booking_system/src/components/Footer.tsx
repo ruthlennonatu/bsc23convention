@@ -11,7 +11,7 @@ const Footer: React.FC<FooterProps> = ({ companyName, year }) => {
     <footer className="footer">
       <hr className="footer-line" />
       <div className="footer-content">
-        <p>&copy; {year} {companyName}</p>
+        <p className='fContent'>&copy; {year} {companyName}</p>
       </div>
     </footer>
   );
