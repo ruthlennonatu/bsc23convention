@@ -7,6 +7,7 @@ import BookingsDisplay from "./components/BookingsDisplay";
 import Footer from "./components/Footer";
 import CustomerPage from "./components/CustomerPage";
 import AdminDashboard from "./components/AdminDashboard";
+import DisplayCustomers from "./components/DisplayCustomers";
 
 function App() {
   const workshopData = {
@@ -28,11 +29,13 @@ function App() {
             <Route path="/admin" element={<AdminDashboard />} />
             <Route path="/Login" element={<LoginComponent />} />
             <Route path="/register" element={<RegisterComponent />} />
+            
             <Route
               path="/bookings"
               element={<BookingsDisplay bookings={[workshopData]} />}
             />
             <Route path="/customerpage" element={<CustomerPage />} />
+            <Route path="/diplayCustomers" element={<DisplayCustomers />} />
           </Routes>
           {/* <BookingsDisplay bookings={[workshopData]} /> */}
           <Footer companyName="Convention Center" year={currentYear} />

@@ -82,18 +82,15 @@
 .footer {
   position: fixed;
   bottom: 0;
-  width: 100%;
-  background-color: rgb(12, 12, 12);
+  display: center ;
 }
+
 
 .footer-line {
   border: 1px solid #0e0d0d;
 }
 
-.footer-content {
-  padding: 10px;
-  text-align: center;
-}
+
 
 .dashboard-container {
   text-align: center; /* Center the text */
