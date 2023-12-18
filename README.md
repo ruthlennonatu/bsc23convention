@@ -32,6 +32,7 @@ Our product will be delivered using an Agile methodology that embraces the DevOp
 - Week 6 Scrum Master Zach Gorman 
 - Week 7 Scrum Master Enda Doran L00165578
 - Week 8 Scrum Master Aaron Darcy l00179158
+- week 9 Scrum Master Ankush Ikhar L00171111
 
 # Product Owner
 Shane McGuire L00161625 (Permanent)
