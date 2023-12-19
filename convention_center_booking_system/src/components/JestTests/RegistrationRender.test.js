@@ -1,6 +1,5 @@
 import { render } from '@testing-library/react';
-import React from 'react';
-import Registration from '../Registration'; 
+import Registration from '../Registration';
 
 describe('Registration Rendering', () => {
   it('renders the Register page with expected elements', () => {
@@ -12,5 +11,5 @@ describe('Registration Rendering', () => {
     expect(getByPlaceholderText('Enter password')).toBeInTheDocument();
     expect(getByPlaceholderText('Repeat password')).toBeInTheDocument();
     expect(getByText('Submit')).toBeInTheDocument();
-
   });
+});
