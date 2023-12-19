@@ -1,8 +1,13 @@
-// Mocking mysql2 createConnection and connect function
 jest.mock('mysql2', () => ({
   createConnection: jest.fn().mockReturnThis(),
   connect: jest.fn((cb) => cb(null))
 }));
+
+// Assuming you have a function like `addCustomer` which uses the mysql2 connection
+// This function should be the one your test is intended to cover.
+const addCustomer = async () => {
+  // Implementation that uses mysql2 to add a customer
+};
 
 describe('POST /add-customer', () => {
   it('should insert a new customer', async () => {
@@ -18,24 +23,11 @@ describe('POST /add-customer', () => {
     // Mocking the mysql2 module's functionality
     require('mysql2').createConnection.mockImplementation(() => mockConnection);
 
-    // Commenting out, its not used
-    // const newCustomer = {
-    //   first_name: 'John',
-    //   last_name: 'Doe',
-    //   email: 'john.doe@example.com',
-    //   phone_number: '1234567890'
-    // };
+    // Call the function you are testing
+    await addCustomer(); // Replace with actual call and parameters as needed
 
-    const response = {
-      statusCode: 200,
-      text: 'Customer inserted successfully!'
-    }
-
-
-    expect(response.statusCode).toBe(200);
-    expect(response.text).toEqual('Customer inserted successfully!');
-    //expect(mockQuery).toHaveBeenCalledTimes(2);
+    // Assertions
+    expect(mockQuery).toHaveBeenCalledTimes(2);
+    // Add more assertions as needed to validate the behavior of addCustomer function
   });
-
-
 });

@@ -1,14 +1,22 @@
 import React from 'react';
 
-
 interface DisplayCustomersProps {
   customers: string[];
   showDetails: boolean;
 }
 
-const DisplayCustomers: React.FC<DisplayCustomersProps> = ({ }) => {
+const DisplayCustomers: React.FC<DisplayCustomersProps> = ({ customers, showDetails }) => {
   return (
-    <h1> Hello</h1>
+    <div>
+      <h1>Hello</h1>
+      {showDetails &&
+        <ul>
+          {customers.map((customer, index) => (
+            <li key={index}>{customer}</li>
+          ))}
+        </ul>
+      }
+    </div>
   );
 };
 
