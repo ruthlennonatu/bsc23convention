@@ -1,10 +1,6 @@
 name: Generate SBOM
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on: [push, pull_request]
 
 jobs:
   build:
@@ -12,20 +8,20 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    
+
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '14'
+        node-version: '14' # Or your project's Node.js version
 
     - name: Install Dependencies
       run: npm install
 
     - name: Generate SBOM
-      run: npx @cyclonedx/bom -o bom.xml
+      run: npm list --all --json > sbom.json
 
     - name: Upload SBOM as Artifact
       uses: actions/upload-artifact@v2
       with:
         name: sbom
-        path: bom.xml
+        path: sbom.json
