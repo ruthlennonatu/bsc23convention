@@ -53,7 +53,7 @@ app.post('/add-customer', (req, res) => {
       const insertQuery = 'INSERT INTO customers (first_name, last_name, email, phone_number) VALUES (?, ?, ?, ?)';
       const insertValues = [customer.first_name, customer.last_name, customer.email, customer.phone_number];
 
-      con.query(insertQuery, insertValues, (err, results) => {
+      con.query(insertQuery, insertValues, (err) => {
         if (err) {
           console.error('Error inserting customer:', err);
           res.status(500).send('Error inserting customer');

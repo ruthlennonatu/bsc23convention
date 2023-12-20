@@ -1,0 +1,32 @@
+name: Scheduled Maintenance
+
+on:
+  schedule:
+    # Runs at 02:00 UTC every Monday
+    - cron: '0 2 * * 1'
+
+jobs:
+  maintenance:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16' 
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Update Dependencies
+      run: npm update
+
+    - name: Run Custom Maintenance Script
+      run: 
+        echo "Running database or cache clearing script"
+        ./scripts/clearCache.js
+
+    
