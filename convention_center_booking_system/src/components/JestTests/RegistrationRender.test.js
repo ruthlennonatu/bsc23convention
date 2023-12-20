@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import Registration from '../Registration'; 
+import '@testing-library/jest-dom';
 
 describe('Registration Rendering', () => {
   it('renders the Register page with expected elements', () => {

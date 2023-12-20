@@ -49,6 +49,7 @@ const RegisterComponent: React.FC = () => {
           <h3>Register</h3>
           <h5 id="help" style={{ color: "red" }}></h5>
           <table style={{ margin: "auto" }}>
+            <tbody>
             <tr>
               <td>
                 <label>Email address: </label>
@@ -63,6 +64,7 @@ const RegisterComponent: React.FC = () => {
                 />
               </td>
             </tr>
+
             <tr>
               <td>
                 <label>Repeat Email address: </label>
@@ -77,6 +79,7 @@ const RegisterComponent: React.FC = () => {
                 />
               </td>
             </tr>
+
             <tr>
               <td>
                 <label>Password: </label>
@@ -90,6 +93,7 @@ const RegisterComponent: React.FC = () => {
                 />
               </td>
             </tr>
+
             <tr>
               <td>
                 <label>Repeat Password: </label>
@@ -103,6 +107,7 @@ const RegisterComponent: React.FC = () => {
                 />
               </td>
             </tr>
+            </tbody>
           </table>
 
           <div className="mb-3">
