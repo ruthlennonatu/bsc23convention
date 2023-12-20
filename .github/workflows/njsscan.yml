@@ -2,7 +2,7 @@ name: njsscan sarif
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main" ]  #Run scan on all code pushed to main
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [ "main" ]
@@ -28,7 +28,7 @@ jobs:
       uses: ajinabraham/njsscan-action@7237412fdd36af517e2745077cedbf9d6900d711
       with:
         args: '. --sarif --output results.sarif || true'
-    - name: Upload njsscan report
+    - name: Upload njsscan report  #Uploads Scan results as an artefact to Repo
       uses: github/codeql-action/upload-sarif@v2
       with:
         sarif_file: results.sarif
