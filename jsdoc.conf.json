@@ -1,0 +1,16 @@
+{
+    "source": {
+        "include": ["convention_center_booking_system/src/components"],
+        "includePattern": ".+\\.jsx?$"
+      },
+    "plugins": ["node_modules/jsdoc-babel"],
+    "templates": {
+      "cleverLinks": true,
+      "monospaceLinks": true
+    },
+    "opts": {
+      "recurse": true,
+      "destination": "./docs"
+    }
+  }
+  
