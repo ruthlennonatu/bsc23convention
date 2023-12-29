@@ -29,10 +29,11 @@ Our product will be delivered using an Agile methodology that embraces the DevOp
 # Scrum Master
 - Week 4 Scrum Master Shane McGuire L00161625
 - Week 5 Scrum Master Conor Dolan L00141197
-- Week 6 Scrum Master Zach Gorman 
+- Week 6 Scrum Master Zach Gorman l00178047
 - Week 7 Scrum Master Enda Doran L00165578
 - Week 8 Scrum Master Aaron Darcy l00179158
-- week 9 Scrum Master Ankush Ikhar L00171111
+- Week 9 Scrum Master Ibraim Abduramanov l00178054
+- Week 10 Scrum Master Ankush Ikhar l00171111
 
 # Product Owner
 Shane McGuire L00161625 (Permanent)
@@ -76,7 +77,6 @@ Project Log	Team log for the project
 # Risk Register
 These are the current Risks on the project, re-aligned on a weekly basis
 
-
 # Tenants of Design
 The code framework to be used will be Java, we will be programming using the app IntelliJ
 
@@ -86,10 +86,7 @@ The code framework to be used will be Java, we will be programming using the app
 - PMD: Static code anaylsis checking tool. The tool scans Java source files to look for potential vulnerabilities such as coding errors and security flaws. It offers a cheap alternative to the tedious process of continually going over a huge code base. PMD is also capable of detecting other issues, such as dead code and performance issues along with poor code practices and styling. PMD has been installed through GitHub actions to scan code as it is commited.
 
 # Testing:
-    Unit testing
-    integration testing
-    UA
-    API Testing
+    JEST Unit Testing
 # Environments:
     staging and production
     tight configuration management for consistency and reproducibility
@@ -115,7 +112,7 @@ The code framework to be used will be Java, we will be programming using the app
     Use Agile methodoligies in the project at all times.
 
 # Meetings
-Stand-ups will occur on Every Thursday/12:30-1:30 during class and Thursday/12:30-1:30 using Automated bot.
+Stand-ups will occur on Every Wednesday/12:30-1:30 during class and Tuesday/18:30-19:00 using Automated bot.
 The order that people give their updates will be based starting with the scrum master and going clockwise around the group of those present at the meeting.
 Updates will be in the form: What I've done, Impediments, What I plan to do.
 Sprint planning will occur at the start of class every week at the end of our sprint.

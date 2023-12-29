@@ -4,8 +4,14 @@ import 'dotenv/config';
 
 var app = express();
 
+import rateLimit from 'express-rate-limit';
 
 
+// Configure rate limit
+const apiLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100 // limit each IP to 100 requests per windowMs
+});
 
 app.use(express.json()); // For parsing application/json
 
@@ -47,7 +53,7 @@ app.post('/add-customer', (req, res) => {
       const insertQuery = 'INSERT INTO customers (first_name, last_name, email, phone_number) VALUES (?, ?, ?, ?)';
       const insertValues = [customer.first_name, customer.last_name, customer.email, customer.phone_number];
 
-      con.query(insertQuery, insertValues, (err, results) => {
+      con.query(insertQuery, insertValues, (err) => {
         if (err) {
           console.error('Error inserting customer:', err);
           res.status(500).send('Error inserting customer');
@@ -60,6 +66,9 @@ app.post('/add-customer', (req, res) => {
   });
 });
 
+// Apply the rate limiting middleware to the /customers route
+app.use('/customers', apiLimiter);
+
 // Endpoint to get all customers
 app.get('/customers', (req, res) => {
   con.query('SELECT * FROM customers', (err, results) => {
@@ -71,6 +80,18 @@ app.get('/customers', (req, res) => {
     res.json(results);
   });
 });
+
+// // Endpoint to get all customers
+// app.get('/customers', (req, res) => {
+//   con.query('SELECT * FROM customers', (err, results) => {
+//     if (err) {
+//       console.error('Error fetching customers:', err);
+//       res.status(500).send('Error fetching customers');
+//       return;
+//     }
+//     res.json(results);
+//   });
+// });
 
 const PORT = 3000;
 if (process.env.NODE_ENV !== 'test') {

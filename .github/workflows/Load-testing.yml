@@ -13,22 +13,23 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      - name: Set up Java (required for JMeter)
+        uses: actions/setup-java@v1
         with:
-          node-version: 16
+          java-version: '11'  
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build the React app
-        run: npm run build
+      - name: Install JMeter
+        run: |
+          wget https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-5.4.3.tgz
+          tar -xzf apache-jmeter-5.4.3.tgz
+          echo "JMeter installed successfully"
 
       - name: Run JMeter Load Test
         run: |
-          # Download JMeter (adjust the version as needed)
-          wget https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-5.4.3.tgz
-          tar -xzf apache-jmeter-5.4.3.tgz
-         
-          # Run the JMeter test plan
-          ./apache-jmeter-5.4.3/bin/jmeter -n -t path/to/your-test-plan.jmx
+          apache-jmeter-5.4.3/bin/jmeter -n -t ./convention_center_booking_system/jmeter.jmx -l test-results.jtl
+          
+      - name: Upload Test Results as Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: jmeter-test-results
+          path: test-results.jtl

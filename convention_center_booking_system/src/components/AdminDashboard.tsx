@@ -7,6 +7,7 @@ const AdminDashboard: React.FC<AdminDashboardProps> = () => {
     (option: string) => (event: MouseEvent<HTMLButtonElement>) => {
       // Handle the button click based on the option selected (e.g., manage users, conventions, workshops)
       console.log(`Selected option: ${option}`);
+      console.log(event)
       // Implement specific logic or routing here based on the option chosen
     };
 
