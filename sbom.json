@@ -1,0 +1,103 @@
+{
+  "denque@2.1.0": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/invertase/denque",
+    "publisher": "Invertase",
+    "email": "oss@invertase.io",
+    "url": "http://github.com/invertase/",
+    "path": "C:\\Users\\ankus\\OneDrive\\Desktop\\All Folders\\assignmentRuth\\bsc23convention\\node_modules\\denque",
+    "licenseFile": "C:\\Users\\ankus\\OneDrive\\Desktop\\All Folders\\assignmentRuth\\bsc23convention\\node_modules\\denque\\LICENSE"
+  },
+  "dotenv@16.3.1": {
+    "licenses": "BSD-2-Clause",
+    "repository": "https://github.com/motdotla/dotenv",
+    "path": "C:\\Users\\ankus\\OneDrive\\Desktop\\All Folders\\assignmentRuth\\bsc23convention\\node_modules\\dotenv",
+    "licenseFile": "C:\\Users\\ankus\\OneDrive\\Desktop\\All Folders\\assignmentRuth\\bsc23convention\\node_modules\\dotenv\\LICENSE"
+  },
+  "generate-function@2.3.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/mafintosh/generate-function",
+    "publisher": "Mathias Buus",
+    "path": "C:\\Users\\ankus\\OneDrive\\Desktop\\All Folders\\assignmentRuth\\bsc23convention\\node_modules\\generate-function",
+    "licenseFile": "C:\\Users\\ankus\\OneDrive\\Desktop\\All Folders\\assignmentRuth\\bsc23convention\\node_modules\\generate-function\\LICENSE"
+  },
+  "iconv-lite@0.6.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/ashtuchkin/iconv-lite",
+    "publisher": "Alexander Shtuchkin",
+    "email": "ashtuchkin@gmail.com",
+    "path": "C:\\Users\\ankus\\OneDrive\\Desktop\\All Folders\\assignmentRuth\\bsc23convention\\node_modules\\iconv-lite",
+    "licenseFile": "C:\\Users\\ankus\\OneDrive\\Desktop\\All Folders\\assignmentRuth\\bsc23convention\\node_modules\\iconv-lite\\LICENSE"
+  },
+  "is-property@1.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/mikolalysenko/is-property",
+    "publisher": "Mikola Lysenko",
+    "path": "C:\\Users\\ankus\\OneDrive\\Desktop\\All Folders\\assignmentRuth\\bsc23convention\\node_modules\\is-property",
+    "licenseFile": "C:\\Users\\ankus\\OneDrive\\Desktop\\All Folders\\assignmentRuth\\bsc23convention\\node_modules\\is-property\\LICENSE"
+  },
+  "long@5.2.3": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/dcodeIO/long.js",
+    "publisher": "Daniel Wirtz",
+    "email": "dcode@dcode.io",
+    "path": "C:\\Users\\ankus\\OneDrive\\Desktop\\All Folders\\assignmentRuth\\bsc23convention\\node_modules\\long",
+    "licenseFile": "C:\\Users\\ankus\\OneDrive\\Desktop\\All Folders\\assignmentRuth\\bsc23convention\\node_modules\\long\\LICENSE"
+  },
+  "lru-cache@7.18.3": {
+    "licenses": "ISC",
+    "repository": "https://github.com/isaacs/node-lru-cache",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "path": "C:\\Users\\ankus\\OneDrive\\Desktop\\All Folders\\assignmentRuth\\bsc23convention\\node_modules\\named-placeholders\\node_modules\\lru-cache",
+    "licenseFile": "C:\\Users\\ankus\\OneDrive\\Desktop\\All Folders\\assignmentRuth\\bsc23convention\\node_modules\\named-placeholders\\node_modules\\lru-cache\\LICENSE"
+  },
+  "lru-cache@8.0.5": {
+    "licenses": "ISC",
+    "repository": "https://github.com/isaacs/node-lru-cache",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "path": "C:\\Users\\ankus\\OneDrive\\Desktop\\All Folders\\assignmentRuth\\bsc23convention\\node_modules\\lru-cache",
+    "licenseFile": "C:\\Users\\ankus\\OneDrive\\Desktop\\All Folders\\assignmentRuth\\bsc23convention\\node_modules\\lru-cache\\LICENSE"
+  },
+  "mysql2@3.6.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sidorares/node-mysql2",
+    "publisher": "Andrey Sidorov",
+    "email": "andrey.sidorov@gmail.com",
+    "path": "C:\\Users\\ankus\\OneDrive\\Desktop\\All Folders\\assignmentRuth\\bsc23convention\\node_modules\\mysql2",
+    "licenseFile": "C:\\Users\\ankus\\OneDrive\\Desktop\\All Folders\\assignmentRuth\\bsc23convention\\node_modules\\mysql2\\License"
+  },
+  "named-placeholders@1.1.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sidorares/named-placeholders",
+    "publisher": "Andrey Sidorov",
+    "email": "sidorares@yandex.com",
+    "path": "C:\\Users\\ankus\\OneDrive\\Desktop\\All Folders\\assignmentRuth\\bsc23convention\\node_modules\\named-placeholders",
+    "licenseFile": "C:\\Users\\ankus\\OneDrive\\Desktop\\All Folders\\assignmentRuth\\bsc23convention\\node_modules\\named-placeholders\\LICENSE"
+  },
+  "safer-buffer@2.1.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/ChALkeR/safer-buffer",
+    "publisher": "Nikita Skovoroda",
+    "email": "chalkerx@gmail.com",
+    "url": "https://github.com/ChALkeR",
+    "path": "C:\\Users\\ankus\\OneDrive\\Desktop\\All Folders\\assignmentRuth\\bsc23convention\\node_modules\\safer-buffer",
+    "licenseFile": "C:\\Users\\ankus\\OneDrive\\Desktop\\All Folders\\assignmentRuth\\bsc23convention\\node_modules\\safer-buffer\\LICENSE"
+  },
+  "seq-queue@0.0.5": {
+    "licenses": "MIT*",
+    "repository": "https://github.com/changchang/seq-queue",
+    "publisher": "changchang",
+    "email": "changchang005@gmail.com",
+    "path": "C:\\Users\\ankus\\OneDrive\\Desktop\\All Folders\\assignmentRuth\\bsc23convention\\node_modules\\seq-queue",
+    "licenseFile": "C:\\Users\\ankus\\OneDrive\\Desktop\\All Folders\\assignmentRuth\\bsc23convention\\node_modules\\seq-queue\\LICENSE"
+  },
+  "sqlstring@2.3.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/mysqljs/sqlstring",
+    "path": "C:\\Users\\ankus\\OneDrive\\Desktop\\All Folders\\assignmentRuth\\bsc23convention\\node_modules\\sqlstring",
+    "licenseFile": "C:\\Users\\ankus\\OneDrive\\Desktop\\All Folders\\assignmentRuth\\bsc23convention\\node_modules\\sqlstring\\LICENSE"
+  }
+}
+
