@@ -105,7 +105,7 @@ The code framework to be used will be Java, we will be programming using the app
     When you are assigned a job, take ownership of it and keep it up to date, do not be afraid to ask others for help, always be honest about your work.
     Do not speak over someone when they are expressing a point, everyone has an equal voice.
     No blame culture.
-    Do not be afraid to ask for help, we are all learning.
+    Don't be afraid to ask for help, we are all learning.
     No invisble work.
     Ask questions to make sure you understand the task given to you.
     Try have some fun, team work makes the dream work.
